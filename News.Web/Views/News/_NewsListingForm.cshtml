@@ -1,0 +1,18 @@
+﻿@model IEnumerable<NewsListingViewModel>
+
+<div class="row equal">
+    @foreach (var news in Model)
+    {
+        <div class="col-sm-4">
+            <div class="card">
+                <img class="img-responsive card-img-top" src="@news.ImageUrl" alt="No Image" />
+                <div class="card-body">
+                    <h3 class="card-title">@news.Title</h3>
+                    <p class="card-text">@news.Description</p>
+                    <p class="card-text">Created on: @news.CreatedOn</p>
+                    <br />
+                </div>
+            </div>
+        </div>
+    }
+</div>
